@@ -1,0 +1,398 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #010329;
+}
+
+.container {
+    width: 547px;
+    height: 633px;
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: 20%;
+    margin: auto;
+    position: absolute;
+    overflow: hidden;
+}
+
+.flower-1 {
+    position: absolute;
+    left: 39%;
+    bottom: 59%;
+}
+
+.flower-2 {
+    position: absolute;
+    top: 44%;
+    left: 81%
+}
+
+.flower-3 {
+    position: absolute;
+    top: 44%;
+    right: -5%
+}
+
+.leaf {
+    position: absolute;
+    width: 50px;
+    height: 105px;
+    border-radius: 50%;
+    rotate: 71deg;
+    background: #C634FF;
+    transform-origin: center;
+}
+
+@keyframes leaf {
+    0% {
+        transform: translateX(-50%) rotate(180deg);
+        opacity: 0;
+    }
+}
+
+.leaf--2 {
+    background: #E24F5F;
+    rotate: 183deg;
+    position: absolute;
+}
+
+.leaf--3 {
+    background: #DE118B;
+    rotate: 212deg;
+    position: absolute;
+    height: 85px;
+    width: 40px;
+}
+
+.leaf-left.leaf--2 {
+    position: absolute;
+    top: -164px;
+    left: -203px;
+}
+
+.leaf-right.leaf--2 {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -54px;
+    left: -194px;
+    rotate: 172deg;
+    transform: rotateY(180deg);
+}
+
+.leaf-left.leaf--3 {
+    position: absolute;
+    top: -48px;
+    left: -203px;
+}
+
+.leaf-left.leaf--3.fall--down--pink {
+    position: absolute;
+    background: linear-gradient(#1A233A, #DE118B, #DE118B);
+    left: -200px;
+    top: -47px;
+    z-index: 3;
+    animation: fall-down-pink 4s linear forwards;
+}
+
+.leaf-left.leaf--3.fall--down--orange {
+    position: absolute;
+    background: linear-gradient(#1A233A, #DE118B, #DE118B);
+    left: -200px;
+    top: -47px;
+    z-index: 3;
+}
+
+.leaf-left.leaf--3.fall--down--yellow {
+    position: absolute;
+    background: linear-gradient(#1A233A, #FFA085, #FFA085);
+    left: -201px;
+    top: -164px;
+    z-index: 3;
+    rotate: 180deg;
+    width: 50px;
+    height: 105px;
+    animation: fall-down-yellow 5s 1.5s linear forwards;
+    transform-origin: center;
+    z-index: 1;
+}
+
+.leaf-left.leaf--3.fall--down--purple {
+    position: absolute;
+    background: linear-gradient(#AD2BE0, #AD2BE0, #1A233A);
+    left: -157px;
+    top: -13px;
+    z-index: 3;
+    rotate: 250deg;
+    width: 50px;
+    height: 105px;
+    transform-origin: center;
+    z-index: 1;
+    animation: fall-down-purple 6s 1.2s linear forwards, swim-fall 6s 7.2s linear infinite;
+}
+
+@keyframes fall-down-purple {
+    0% {
+        transform: rotate(-10deg);
+    }
+
+    50% {
+        transform: rotateX(-70deg);
+        z-index: 3;
+    }
+
+    100% {
+        transform: translate(-290px, 100px) rotate(200deg);
+        bottom: -300px;
+        z-index: -3;
+    }
+}
+
+@keyframes swim-fall {
+
+    0%,
+    100% {
+        transform: translate(-290px, 100px) rotateY(-55deg) rotateX(20deg);
+    }
+
+    25% {
+        transform: translate(-295px, 90px) rotateY(-55deg) rotateX(20deg);
+    }
+
+    50% {
+        transform: translate(-290px, 90px) rotateY(-55deg) rotateX(20deg);
+    }
+
+    75% {
+        transform: translate(-295px, 100px) rotateY(-55deg) rotateX(20deg);
+    }
+}
+
+@keyframes fall-down-pink {
+    0% {
+        transform: rotate(-10deg);
+    }
+
+    50% {
+        bottom: 120px;
+        transform: rotateX(-100deg);
+        z-index: 3;
+    }
+
+    100% {
+        transform: translate(-5px, -250px) rotate(240deg);
+        z-index: -4;
+    }
+}
+
+@keyframes fall-down-yellow {
+    0% {
+        transform: rotate(-30deg);
+    }
+
+    25% {
+        bottom: 3vmin;
+        transform: rotateX(-30deg);
+    }
+
+    26% {
+        transform: rotateX(-25deg);
+    }
+
+    100% {
+        transform: translate(-120px, -520px) rotate(150deg);
+    }
+}
+
+.leaf-right.leaf--3 {
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: -221px;
+    rotate: 204deg;
+    top: 22px;
+}
+
+.leaf--2>.leaf--orange {
+    background: linear-gradient(#FFA085, #FA7373, #1A233A);
+}
+
+.leaf.leaf--3>.leaf--pink {
+    background: linear-gradient(#FF43B6, #C22887, #1A233A);
+    right: 10%;
+    width: 30px;
+    height: 85px;
+}
+
+.leaf-left,
+.fall--down {
+    position: absolute;
+    left: -156px;
+    top: -12px;
+}
+
+.leaf__1 {
+    position: absolute;
+    background: linear-gradient(#AD2BE0, #AD2BE0, #1A233A);
+    width: 37px;
+    height: 105px;
+    border-radius: 50%;
+    top: -5px;
+    left: 27px;
+    transform: rotate(150deg);
+    z-index: 3;
+    animation: leaf 2s backwards;
+    transform-origin: center;
+    opacity: 1;
+}
+
+.leaf__2 {
+    position: absolute;
+    background: linear-gradient(#AD2BE0, #AD2BE0, #1A233A);
+    width: 37px;
+    height: 105px;
+    border-radius: 50%;
+    top: -18px;
+    left: 42px;
+    transform: rotate(129deg);
+    z-index: 2;
+    animation: leaf 3s linear;
+    opacity: 1;
+    transform-origin: center;
+}
+
+.leaf__3 {
+    position: absolute;
+    background: linear-gradient(#AD2BE0, #AD2BE0, #1A233A);
+    width: 37px;
+    height: 105px;
+    border-radius: 50%;
+    top: -30px;
+    left: 51px;
+    transform: rotate(107deg);
+    animation: leaf 3s linear;
+    transform-origin: center;
+    opacity: 1;
+}
+
+.leaf-right {
+    width: 0;
+    height: 0;
+    position: absolute;
+    transform: rotateY(180deg);
+    top: 40px;
+    left: -74px;
+    rotate: 67deg;
+}
+
+.line {
+    position: absolute;
+    width: 15px;
+    height: 336px;
+    border-radius: 15px;
+    margin: auto;
+    z-index: -3;
+    rotate: -18deg;
+    transform: rotateY(180deg);
+    background: linear-gradient(#104D4E, #142544);
+}
+
+.flower-2>.line {
+    position: absolute;
+    left: -179px;
+    bottom: -343px;
+    width: 15px;
+    z-index: -3;
+    height: 447px;
+    background: linear-gradient(to left, #82FDFF, #142544, #104D4E);
+    rotate: 0deg;
+    animation: line 3s linear forwards;
+}
+
+@keyframes line {
+    100% {
+        z-index: -5;
+    }
+}
+
+.flower-3>.line {
+    position: absolute;
+    right: 259px;
+    bottom: -361px;
+    width: 13px;
+    z-index: -4;
+    height: 363px;
+    background: linear-gradient(to left, #82FDFF, #142544, #104D4E);
+    rotate: 25deg;
+}
+
+.flower-1>.line:after {
+    content: '';
+    position: absolute;
+    border: 15px solid #104D4E;
+    border-left: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #104D4E;
+    width: 43px;
+    height: 43px;
+    left: 0;
+    top: -10px;
+    right: 0;
+    border-radius: 30%;
+    transform: rotate(269deg)
+}
+
+.flower-1.line:before {
+    content: '';
+    position: absolute;
+    width: 45px;
+    height: 15px;
+    border-radius: 40%;
+    top: -10px;
+    background: #104D4E;
+    left: 31px;
+    z-index: 1;
+}
+
+.glass {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100px;
+    border-bottom: 200px solid #1A9092;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    opacity: 0.5;
+    rotate: 180deg;
+}
+
+.glass:before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    left: -14px;
+    right: 0;
+    bottom: -90px;
+    width: 100px;
+    border-bottom: 92px solid #1B6D6E;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    opacity: 0.5;
+}
+
+.glass:after {
+    content: "";
+    position: absolute;
+    margin: auto;
+    left: -4px;
+    right: 0;
+    bottom: -30px;
+    width: 100px;
+    border-bottom: 33px solid #182843;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    opacity: 0.5;
+}
